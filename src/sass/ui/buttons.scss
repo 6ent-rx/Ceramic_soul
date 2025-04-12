@@ -1,0 +1,61 @@
+@use "/src/sass/base/mixins.scss" as m;
+@use "/src/sass/base/variables.scss" as v;
+
+.btn-shop {
+    @include m.btn;
+    width: 230px;
+    height: 50px;
+}
+
+.btn-send {
+    @include m.btn;
+    width: 220px;
+    height: 40px;
+    font-size: 16px;
+
+    &:focus {
+        border: 1px solid v.$ceramic;
+    }
+
+    &:disabled {
+        border: 1px solid v.$ui-disabled;
+        color: v.$ui-disabled;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .btn-shop {
+        &:hover {
+            background: v.$dark;
+            color: v.$light;
+            transition: 0.2s ease-out;
+        }
+
+        &:active {
+            box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+            background: rgba(217, 217, 217, 0.1);
+            border: none;
+            color: v.$dark;
+        }
+    }
+
+    .btn-send {
+        &:hover {
+            border: 1px solid v.$ceramic;
+            color: v.$ceramic;
+        }
+
+        &:active {
+            border: 1px solid v.$ceramic;
+            color: v.$dark;
+        }
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .btn-shop {
+        width: 330px;
+        height: 60px;
+    }
+}

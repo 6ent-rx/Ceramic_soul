@@ -1,0 +1,34 @@
+@use "/src/sass/base/variables.scss" as v;
+
+html {
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    background-color: v.$light;
+}
+
+.container {
+    width: 100%;
+    padding: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .container {
+        max-width: 1440px;
+    }
+}

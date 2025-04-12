@@ -1,0 +1,202 @@
+@use "/src/sass/base/variables.scss" as v;
+
+.git {
+    padding-top: 60px;
+
+    &__wrapper {
+        position: relative;
+        margin-top: 60px;
+    }
+
+    &__img {
+        display: none;
+    }
+
+    &__fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__label {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        color: v.$dark;
+    }
+
+    &__input {
+        border: 1px solid #e2e1e5;
+        border-radius: 2px;
+        padding: 10px 15px;
+        width: 100%;
+        height: 48px;
+        background: #fff;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 200%;
+            color: v.$ui-disabled;
+        }
+
+        &:hover {
+            outline: none;
+            border: 1px solid v.$dark;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid v.$dark;
+        }
+    }
+
+    &__textarea-block {
+        margin-top: 8px;
+    }
+
+    &__textarea {
+        border: 1px solid #e2e1e5;
+        border-radius: 2px;
+        padding: 10px 15px;
+        width: 100%;
+        height: 132px;
+        background: #fff;
+        resize: none;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 200%;
+            color: v.$ui-disabled;
+        }
+
+        &:hover {
+            outline: none;
+            border: 1px solid v.$dark;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid v.$dark;
+        }
+    }
+
+    &__checkbox-block {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        column-gap: 15px;
+    }
+
+    &__checkbox {
+        border: 1px solid v.$dark;
+        border-radius: 2px;
+        width: 15px;
+        height: 15px;
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+
+    &__link {
+        color: #a22dc6;
+        text-decoration: none;
+    }
+
+    &__img__vase {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .git {
+        &__img__vase {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        &__input-block {
+            width: 300px;
+            margin-left: 24px;
+        }
+
+        &__textarea-block {
+            width: 300px;
+            margin-left: 24px;
+        }
+
+        &__checkbox-block {
+            margin-left: 24px;
+        }
+
+        &__btn {
+            margin-left: 24px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .git {
+        &__img {
+            display: block;
+            width: 550px;
+            height: 341px;
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        &__input-block {
+            margin-left: 40px;
+        }
+
+        &__textarea-block {
+            margin-left: 40px;
+        }
+
+        &__checkbox-block {
+            margin-left: 40px;
+        }
+
+        &__btn {
+            margin-left: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .git {
+        &__img {
+            width: 573px;
+            height: 356px;
+        }
+
+        &__form__wrapper {
+            padding-left: 147px;
+        }
+
+        &__img__vase {
+            right: 75px;
+        }
+
+
+        &__fieldset {
+            display: flex;
+            column-gap: 45px;
+            margin-left: 147px;
+        }
+
+        &__input-block {
+            margin-left: 0;
+        }
+
+        &__btn,
+        &__checkbox-block,
+        &__textarea-block {
+            margin-left: 147px;
+        }
+    }
+}
