@@ -120,21 +120,8 @@
             right: 0;
         }
 
-        &__input-block {
+        &__form {
             width: 300px;
-            margin-left: 24px;
-        }
-
-        &__textarea-block {
-            width: 300px;
-            margin-left: 24px;
-        }
-
-        &__checkbox-block {
-            margin-left: 24px;
-        }
-
-        &__btn {
             margin-left: 24px;
         }
     }
@@ -149,19 +136,7 @@
             box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
         }
 
-        &__input-block {
-            margin-left: 40px;
-        }
-
-        &__textarea-block {
-            margin-left: 40px;
-        }
-
-        &__checkbox-block {
-            margin-left: 40px;
-        }
-
-        &__btn {
+        &__form {
             margin-left: 40px;
         }
     }
@@ -182,21 +157,20 @@
             right: 75px;
         }
 
+        &__form {
+            width: auto;
+            margin-left: 147px;
+        }
 
         &__fieldset {
             display: flex;
             column-gap: 45px;
-            margin-left: 147px;
         }
 
-        &__input-block {
-            margin-left: 0;
-        }
-
-        &__btn,
-        &__checkbox-block,
-        &__textarea-block {
-            margin-left: 147px;
+        &__input-block,
+        &__textarea-block,
+        &__checkbox-block {
+            width: 300px;
         }
     }
 }
