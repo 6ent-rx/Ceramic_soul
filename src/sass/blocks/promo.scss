@@ -65,6 +65,11 @@
     .promo {
         padding-top: 40px;
 
+        &__container {
+            max-width: none;
+            padding: 0 240px;
+        }
+
         &__wrapper {
             margin-top: 79px;
         }
