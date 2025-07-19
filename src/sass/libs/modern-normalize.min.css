@@ -165,3 +165,8 @@ img {
 	display: block;
 	max-inline-size: 100%;
 }
+
+fieldset {
+	padding: 0;
+	margin: 0;
+}
