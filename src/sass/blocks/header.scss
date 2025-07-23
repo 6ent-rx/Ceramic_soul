@@ -1,6 +1,46 @@
 @use "/src/sass/base/variables.scss" as v;
 
 .hdr {
+    position: relative;
+
+    &__menu {
+        position: fixed;
+        padding: 50px 10px;
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        left: -100vw;
+        top: 0;
+        background-color: v.$light;
+        transition: all 0.5s;
+
+        &_active {
+            transform: translateX(100%);
+        }
+    }
+
+    &__menu-closed {
+        cursor: pointer;
+    }
+
+    &__menu-nav {
+        margin: 50px 0 0 14px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            padding: 0;
+            list-style-type: none;
+        }
+    }
+
+    &__menu-link {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: v.$dark;
+
+    }
 
     &__top {
         display: flex;
@@ -32,6 +72,10 @@
 
 @media screen and (min-width: 768px) {
     .hdr {
+        &__menu {
+            display: none;
+        }
+
         &__burger {
             visibility: hidden;
         }
