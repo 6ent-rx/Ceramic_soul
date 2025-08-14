@@ -46,7 +46,42 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+let tabs = document.getElementsByClassName('catalog__tab');
+let item = document.getElementsByClassName('catalog__content-item');
 
+tabs[0].addEventListener('click', function () {
+    tabs[1].classList.remove('catalog__tab_active');
+    tabs[2].classList.remove('catalog__tab_active');
 
+    tabs[0].classList.add('catalog__tab_active');
 
+    item[0].style = 'display: flex;';
+    item[1].style = 'display: flex;';
+    item[2].style = 'display: flex;';
+    item[3].style = 'display: flex;';
+});
+
+tabs[1].addEventListener('click', function () {
+    tabs[0].classList.remove('catalog__tab_active');
+    tabs[2].classList.remove('catalog__tab_active');
+
+    tabs[1].classList.add('catalog__tab_active');
+
+    item[0].style = 'display: none;';
+    item[1].style = 'display: flex;';
+    item[2].style = 'display: flex;';
+    item[3].style = 'display: flex;';
+});
+
+tabs[2].addEventListener('click', function () {
+    tabs[0].classList.remove('catalog__tab_active');
+    tabs[1].classList.remove('catalog__tab_active');
+
+    tabs[2].classList.add('catalog__tab_active');
+
+    item[0].style = 'display: flex;';
+    item[1].style = 'display: none;';
+    item[2].style = 'display: none;';
+    item[3].style = 'display: none;';
+});
 

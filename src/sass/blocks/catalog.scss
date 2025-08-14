@@ -1,0 +1,143 @@
+@use '/src/sass/base/variables.scss' as v;
+
+.catalog {
+    padding-top: 50px;
+
+    &__title {
+        margin-top: 60px;
+    }
+
+    &__tabs {
+        padding: 13px 25px;
+        max-width: 460px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 13px;
+        margin-top: 60px;
+        border: 1px solid v.$dark;
+    }
+
+    &__tab {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #000;
+        cursor: pointer;
+
+        &_active::after {
+            margin-top: 1px;
+            content: '';
+            display: block;
+            background-color: #000;
+            width: 100%;
+            height: 1px;
+        }
+    }
+
+    &__content {
+        margin: 60px 0 60px 0;
+        display: grid;
+        grid-template-columns: minmax(auto, 430px);
+        row-gap: 20px;
+        column-gap: 20px;
+        justify-content: center;
+    }
+
+    &__content-item {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__img-item {
+        width: 100%;
+    }
+
+    &__contnent-info {
+        flex: 1;
+        padding: 11px 12px 17px 12px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 7px;
+        border: 1px solid v.$dark;
+        border-top: none;
+    }
+
+    &__name-item {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &__price-item {
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalog {
+        &__content {
+            position: relative;
+            padding-top: 10px;
+            grid-template-columns: repeat(2, minmax(auto, 340px));
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                background-color: v.$dark;
+                width: 200px;
+                height: 1px;
+            }
+
+            &::after {
+                left: 0px;
+                content: '';
+                position: absolute;
+                top: 0;
+                display: block;
+                background-color: v.$dark;
+                width: 1px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .catalog {
+        &__content {
+            padding-top: 25px;
+            grid-template-columns: repeat(3, minmax(auto, 340px));
+            column-gap: 35px;
+            row-gap: 35px;
+        }
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .catalog {
+        &__title {
+            margin-top: 100px;
+        }
+
+        &__content {
+            margin: 60px 0 100px 0;
+            grid-template-columns: repeat(4, minmax(auto, 285px));
+            column-gap: 83px;
+            row-gap: 25px;
+        }
+    }
+}

@@ -3,6 +3,10 @@
 .works {
     padding: 60px 0;
 
+    &__img {
+        object-fit: cover;
+    }
+
     &__slider {
         margin-top: 40px;
         padding-bottom: 40px;
